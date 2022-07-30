@@ -1,0 +1,182 @@
+body {
+  position: relative;
+  min-height: 100vh;
+  background-color: black;
+  --var: translateX(0%);
+  overflow: hidden;
+}
+body > div:nth-child(1) {
+  right: 50.6%;
+  top: 50.6%;
+  --var: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+body > div:nth-child(2) {
+  right: 50.6%;
+  top: 50.6%;
+  --var: translateX(calc(-50% + 86.9%)) translateY(-50%);
+  transform: translateX(calc(-50% + 86.9%)) translateY(-50%);
+}
+body > div:nth-child(3) {
+  right: 50.6%;
+  top: 50.6%;
+  --var: translateX(calc(-50% - 87%)) translateY(-50%);
+  transform: translateX(calc(-50% - 87%)) translateY(-50%);
+}
+body > div:nth-child(4) {
+  right: 50.6%;
+  top: 50.6%;
+  --var: translateX(-50%) translateY(calc(-50% + 100%));
+  transform: translateX(-50%) translateY(calc(-50% + 100%));
+}
+body > div:nth-child(5) {
+  right: 50.6%;
+  top: 50.6%;
+  --var: translateX(-50%) translateY(calc(-50% - 100%));
+  transform: translateX(-50%) translateY(calc(-50% - 100%));
+}
+body > div:nth-child(6) {
+  right: 50.6%;
+  top: 50.6%;
+  --var: translateX(calc(-50% + 86.9%)) translateY(calc(-50% - 100%));
+  transform: translateX(calc(-50% + 86.9%)) translateY(calc(-50% - 100%));
+}
+body > div:nth-child(7) {
+  right: 50.6%;
+  top: 50.6%;
+  --var: translateX(calc(-50% - 87%)) translateY(calc(-50% - 100%));
+  transform: translateX(calc(-50% - 87%)) translateY(calc(-50% - 100%));
+}
+body > div:nth-child(8) {
+  right: 50.6%;
+  top: 50.6%;
+  --var: translateX(calc(-50% + 86.9%)) translateY(calc(-50% + 100%));
+  transform: translateX(calc(-50% + 86.9%)) translateY(calc(-50% + 100%));
+}
+body > div:nth-child(9) {
+  right: 50.6%;
+  top: 50.6%;
+  --var: translateX(calc(-50% - 87%)) translateY(calc(-50% + 100%));
+  transform: translateX(calc(-50% - 87%)) translateY(calc(-50% + 100%));
+}
+body > div:nth-child(10) {
+  right: 50.6%;
+  top: 50.6%;
+  --var: translateX(calc(-50% + 173.8%)) translateY(calc(-50% - 100%));
+  transform: translateX(calc(-50% + 173.8%)) translateY(calc(-50% - 100%));
+}
+body > div:nth-child(11) {
+  right: 50.6%;
+  top: 50.6%;
+  --var: translateX(calc(-50% + 173.8%)) translateY(calc(-50%));
+  transform: translateX(calc(-50% + 173.8%)) translateY(calc(-50%));
+}
+body > div:nth-child(12) {
+  right: 50.6%;
+  top: 50.6%;
+  --var: translateX(calc(-50% + 173.8%)) translateY(calc(-50% + 100%));
+  transform: translateX(calc(-50% + 173.8%)) translateY(calc(-50% + 100%));
+}
+
+body > div {
+  border-radius: 50%;
+  border: 2px solid rgb(255, 227, 72, 0.05);
+  width: 15vmin;
+  height: 15vmin;
+  position: absolute;
+  background-color: rgba(240, 248, 255, 0.03);
+  opacity: 0.4;
+  animation: 10s rotationAnimation infinite;
+}
+body > div div {
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: inherit;
+  opacity: 0.3;
+  border: 2px solid rgb(255, 227, 72);
+  animation: 10s rotationAnimation infinite;
+}
+body {
+  animation: 22s rotationAnimation infinite reverse;
+}
+div div:nth-child(1) {
+  top: 50.6%;
+  background-color: yellow;
+}
+div div:nth-child(2) {
+  top: -50.6%;
+  background-color: skyblue;
+}
+div div:nth-child(3) {
+  right: 44%;
+  top: -25.5%;
+  background-color: greenyellow;
+}
+div div:nth-child(4) {
+  right: 44%;
+  top: 25.5%;
+  background-color: violet;
+}
+div div:nth-child(5) {
+  right: -44%;
+  top: 25.5%;
+  background-color: orange;
+}
+div div:nth-child(6) {
+  right: -44%;
+  top: -25.5%;
+  background-color: gainsboro;
+}
+div div:nth-child(7) {
+  top: 75%;
+  right: 44%;
+  background-color: whitesmoke;
+}
+div div:nth-child(8) {
+  top: 75%;
+  right: -44%;
+  background-color: pink;
+}
+div div:nth-child(9) {
+  top: -75%;
+  right: 43.5%;
+  background-color: rosybrown;
+}
+div div:nth-child(10) {
+  top: -75%;
+  right: -44%;
+  background-color: burlywood;
+}
+div div:nth-child(11) {
+  right: 86.4%;
+  background-color: rgb(219, 95, 95);
+}
+div div:nth-child(12) {
+  right: -90.6%;
+  background-color: lightseagreen;
+}
+
+@keyframes rotationAnimation {
+  0% {
+    transform: var(--var);
+  }
+  16.666% {
+    transform: var(--var) rotate(60deg);
+  }
+  20% {
+    transform: var(--var) rotate(120deg);
+  }
+  50% {
+    transform: var(--var) rotate(180deg);
+  }
+  80% {
+    transform: var(--var) rotate(240deg);
+  }
+  83.33% {
+    transform: var(--var) rotate(300deg);
+  }
+  100% {
+    transform: var(--var) rotate(360deg);
+  }
+}
